@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exemplo de Formulário com Botão</title>
+<!-- Estilos CSS personalizados para o formulário, se for usar seu estilo, pode apagar essa linha -->
+<link rel="stylesheet" type="text/css" href="https://n.criaeenvia.com/assets/css/fomularios-html.css">
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 20px;
+    }
+    .headline {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    .button {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 5px;
+    }
+</style>
+</head>
+<body>
+    <div class="headline">Comece Aqui</div>
+    <button class="button" onclick="abrirFormulario()">Clique Aqui</button>
+
+    <!-- Formulário de integração do N.Criaeenvia -->
+    <div id="formularioIntegracao" style="display: none;">
+        <form action="https://n.criaeenvia.com/integracao-optin/confirmacao-formulario" method="post" target="_blank" id="formIntegracaoHTML">
+            <label for="email">E-mail: </label>
+            <input type="email" name="email" id="email" required>
+            <br><br>
+            <label for="nome">Nome: </label>
+            <input type="text" name="nome" id="nome">
+            <br><br>
+            <!-- Não apagar as linhas abaixo -->
+            <input type="hidden" name="infos" value="NHZUMHFrT0VrZGd2REw5aWxxdVpwRStNVFZkZTNnNnlsTlNMQmdpUTR6MnJGT0I1aHBlcFlwWWNKdkdEY09rVHJKaVJKSXV2cWh5RDgxU2lId0RJdkQxWFU0TWRvTUlZejhOWU1YT0xvRWlYM2xSa2k5UTVERnRMVkFlMm5IRGhBK0d4bEJZdGFBdVlnL0xpNjNaT1k1MHlkS0kzRzJFZHl6NldVR05KQ3ZZV2szTTZydzFPenNUeUFacEk5RW51aXJCdEVkcUVkVmE4dHJsOXN3aFc0dz09">
+            <br><br>
+            <input type="submit" name="enviar" value="Inscreva-se">
+        </form>
+    </div>
+
+    <script>
+        function abrirFormulario() {
+            document.getElementById('formularioIntegracao').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
